@@ -859,7 +859,7 @@ if num_unit_hydrographs == 2:
         T2_lower_hour = st.number_input("Hours", min_value=0, value=0, step=1, key="T2_lower_hour_2")
         T2_lower_minute = st.number_input("Minutes", min_value=0, value=20, step=1, key="T2_lower_minute_2")
         st.write("Upper Limit:")
-        T2_upper_hour = st.number_input("Hours", min_value=0, value=6, step=1, key="T2_upper_hour_2")
+        T2_upper_hour = st.number_input("Hours", min_value=0, value=5, step=1, key="T2_upper_hour_2")
         T2_upper_minute = st.number_input("Minutes", min_value=0, value=0, step=1, key="T2_upper_minute_2")
 
     # Input for K1 and K2
@@ -869,13 +869,13 @@ if num_unit_hydrographs == 2:
 
     with col1:
         st.markdown("### K1")
-        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=0.5, step=0.001, format="%.2f", key="K1_lower_2")
-        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=3.0, step=0.001, format="%.2f", key="K1_upper_2")
+        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.3f", key="K1_lower_2")
+        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K1_upper_2")
 
     with col2:
         st.markdown("### K2")
-        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.2f", key="K2_lower_2")
-        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=7.0, step=0.001, format="%.2f", key="K2_upper_2")
+        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K2_lower_2")
+        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=5.0, step=0.001, format="%.3f", key="K2_upper_2")
 
     # Calculate time ranges in seconds
     T1_lower_limit = (T1_lower_hour * 60 + T1_lower_minute) * 60
@@ -914,16 +914,16 @@ elif num_unit_hydrographs == 3:
         T2_lower_hour = st.number_input("Hours", min_value=0, value=0, step=1, key="T2_lower_hour_3")
         T2_lower_minute = st.number_input("Minutes", min_value=0, value=20, step=1, key="T2_lower_minute_3")
         st.write("Upper Limit:")
-        T2_upper_hour = st.number_input("Hours", min_value=0, value=6, step=1, key="T2_upper_hour_3")
+        T2_upper_hour = st.number_input("Hours", min_value=0, value=4, step=1, key="T2_upper_hour_3")
         T2_upper_minute = st.number_input("Minutes", min_value=0, value=0, step=1, key="T2_upper_minute_3")
 
     with col3:
         st.markdown("### T3")
         st.write("Lower Limit:")
         T3_lower_hour = st.number_input("Hours", min_value=0, value=0, step=1, key="T3_lower_hour_3")
-        T3_lower_minute = st.number_input("Minutes", min_value=0, value=20, step=1, key="T3_lower_minute_3")
+        T3_lower_minute = st.number_input("Minutes", min_value=0, value=30, step=1, key="T3_lower_minute_3")
         st.write("Upper Limit:")
-        T3_upper_hour = st.number_input("Hours", min_value=0, value=6, step=1, key="T3_upper_hour_3")
+        T3_upper_hour = st.number_input("Hours", min_value=0, value=7, step=1, key="T3_upper_hour_3")
         T3_upper_minute = st.number_input("Minutes", min_value=0, value=0, step=1, key="T3_upper_minute_3")    
 
     # Input for K1, K2 and K3
@@ -933,18 +933,18 @@ elif num_unit_hydrographs == 3:
 
     with col1:
         st.markdown("### K1")
-        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=0.5, step=0.001, format="%.2f", key="K1_lower_3")
-        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=3.0, step=0.001, format="%.2f", key="K1_upper_3")
+        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.3f", key="K1_lower_3")
+        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K1_upper_3")
 
     with col2:
         st.markdown("### K2")
-        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.2f", key="K2_lower_3")
-        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=7.0, step=0.001, format="%.2f", key="K2_upper_3")
+        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K2_lower_3")
+        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=3.0, step=0.001, format="%.3f", key="K2_upper_3")
     
     with col3:
         st.markdown("### K3")
-        K3_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.2f", key="K3_lower_3")
-        K3_upper = st.number_input("Upper Limit", min_value=0.0, value=7.0, step=0.001, format="%.2f", key="K3_upper_3")
+        K3_lower = st.number_input("Lower Limit", min_value=0.0, value=3.0, step=0.001, format="%.3f", key="K3_lower_3")
+        K3_upper = st.number_input("Upper Limit", min_value=0.0, value=7.0, step=0.001, format="%.3f", key="K3_upper_3")
     
     # Calculate time ranges in seconds
     T1_lower_limit = (T1_lower_hour * 60 + T1_lower_minute) * 60
@@ -990,16 +990,16 @@ elif num_unit_hydrographs == 4:
         T2_lower_hour = st.number_input("Hours", min_value=0, value=0, step=1, key="T2_lower_hour_4")
         T2_lower_minute = st.number_input("Minutes", min_value=0, value=20, step=1, key="T2_lower_minute_4")
         st.write("Upper Limit:")
-        T2_upper_hour = st.number_input("Hours", min_value=0, value=6, step=1, key="T2_upper_hour_4")
+        T2_upper_hour = st.number_input("Hours", min_value=0, value=4, step=1, key="T2_upper_hour_4")
         T2_upper_minute = st.number_input("Minutes", min_value=0, value=0, step=1, key="T2_upper_minute_4")
 
     with col3:
         st.markdown("### T3")
         st.write("Lower Limit:")
         T3_lower_hour = st.number_input("Hours", min_value=0, value=0, step=1, key="T3_lower_hour_4")
-        T3_lower_minute = st.number_input("Minutes", min_value=0, value=20, step=1, key="T3_lower_minute_4")
+        T3_lower_minute = st.number_input("Minutes", min_value=0, value=30, step=1, key="T3_lower_minute_4")
         st.write("Upper Limit:")
-        T3_upper_hour = st.number_input("Hours", min_value=0, value=6, step=1, key="T3_upper_hour_4")
+        T3_upper_hour = st.number_input("Hours", min_value=0, value=7, step=1, key="T3_upper_hour_4")
         T3_upper_minute = st.number_input("Minutes", min_value=0, value=0, step=1, key="T3_upper_minute_4") 
         
     with col4:
@@ -1018,23 +1018,23 @@ elif num_unit_hydrographs == 4:
 
     with col1:
         st.markdown("### K1")
-        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=0.5, step=0.001, format="%.2f", key="K1_lower_4")
-        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=3.0, step=0.001, format="%.2f", key="K1_upper_4")
+        K1_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.3f", key="K1_lower_4")
+        K1_upper = st.number_input("Upper Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K1_upper_4")
 
     with col2:
         st.markdown("### K2")
-        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=1.0, step=0.001, format="%.2f", key="K2_lower_4")
-        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=5.0, step=0.001, format="%.2f", key="K2_upper_4")
+        K2_lower = st.number_input("Lower Limit", min_value=0.0, value=2.0, step=0.001, format="%.3f", key="K2_lower_4")
+        K2_upper = st.number_input("Upper Limit", min_value=0.0, value=3.0, step=0.001, format="%.3f", key="K2_upper_4")
     
     with col3:
         st.markdown("### K3")
-        K3_lower = st.number_input("Lower Limit", min_value=0.0, value=3.0, step=0.001, format="%.2f", key="K3_lower_4")
-        K3_upper = st.number_input("Upper Limit", min_value=0.0, value=7.0, step=0.001, format="%.2f", key="K3_upper_4")
+        K3_lower = st.number_input("Lower Limit", min_value=0.0, value=3.0, step=0.001, format="%.3f", key="K3_lower_4")
+        K3_upper = st.number_input("Upper Limit", min_value=0.0, value=5.0, step=0.001, format="%.3f", key="K3_upper_4")
     
     with col4:
         st.markdown("### K4")
-        K4_lower = st.number_input("Lower Limit", min_value=0.0, value=4.0, step=0.001, format="%.2f", key="K4_lower_4")
-        K4_upper = st.number_input("Upper Limit", min_value=0.0, value=10.0, step=0.001, format="%.2f", key="K4_upper_4")
+        K4_lower = st.number_input("Lower Limit", min_value=0.0, value=4.0, step=0.001, format="%.3f", key="K4_lower_4")
+        K4_upper = st.number_input("Upper Limit", min_value=0.0, value=10.0, step=0.001, format="%.3f", key="K4_upper_4")
 
     # Calculate time ranges in seconds
     T1_lower_limit = (T1_lower_hour * 60 + T1_lower_minute) * 60
